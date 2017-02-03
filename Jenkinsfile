@@ -3,8 +3,8 @@ node
 	stage 'Checkout'
 	
 			bat 'git init &&  git config http.sslVerify false'
-			checkout([$class: 'GitSCM', branches: [[name: '*/master']],
-			userRemoteConfigs: [[url: 'https://github.com/egirdhar/SampleMvcApp-Pipeline.git']]])
+	//		checkout([$class: 'GitSCM', branches: [[name: '*/master']],
+	//		userRemoteConfigs: [[url: 'https://github.com/JonPSmith/SampleMvcWebApp.git']]])
 	
 	stage 'Build'
 			// specify the home path of exe files
@@ -20,7 +20,7 @@ node
 			
 			String nUnit        = "${appsHome}/NUnit.org"
 			
-			bat "\"${nUnit}/nunit-console/nunit3-console.exe\" --result:TestResult.xml;format=nunit2  Tests/bin/Debug/Tests.dll"
+			bat "\"${nUnit}/nunit-console/nunit3-console.exe\" --result:TestResult.xml;format=nunit2  Tests/target/Tests.dll"
 			step([$class: 'NUnitPublisher', testResultsPattern:'**/TestResult.xml', debug: false, keepJUnitReports: true, skipJUnitArchiver:false, failIfNoResults: true]) 
 	
 	stage 'Code Analysis'
@@ -75,4 +75,3 @@ node
 }
 
   
-   

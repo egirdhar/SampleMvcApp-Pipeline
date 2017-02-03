@@ -36,7 +36,7 @@ namespace Tests.UnitTests.Group01DataLayer
 {
     class Test10SetupBlogs
     {
-        [Test]
+       /*  [Test]
         public void Check01XmlFileLoadOk()
         {
 
@@ -121,6 +121,6 @@ namespace Tests.UnitTests.Group01DataLayer
                 db.Posts.Count().ShouldEqual(3);
                 db.Tags.Count().ShouldEqual(3);
             }
-        }
-    }
+        }*/
+    } 
 }

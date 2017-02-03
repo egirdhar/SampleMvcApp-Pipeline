@@ -39,7 +39,7 @@ namespace Tests.UnitTests.Group01DataLayer
 {
     class Test14ReadWriteBlogs
     {
-
+/* 
         [SetUp]
         public void SetUp()
         {
@@ -327,5 +327,5 @@ namespace Tests.UnitTests.Group01DataLayer
                 CollectionAssert.AreEquivalent(db.Tags.Take(2).Select(x => x.TagId), loadedPost.Tags.Select(x => x.TagId));
             }
         }
-    }
-}
+  */  }
+ }

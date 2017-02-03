@@ -38,7 +38,7 @@ namespace Tests.UnitTests.Group01DataLayer
 {
     class Test13Validation
     {
-
+/* 
         [TestFixtureSetUp]
         public void SetUpFixture()
         {
@@ -225,6 +225,6 @@ namespace Tests.UnitTests.Group01DataLayer
                 status.Errors[1].ErrorMessage.ShouldEqual("Sorry. Not allowed to end a sentance with 'lamb'.");
             }
         }
-    }
-}
+ */   }
+ }
 
