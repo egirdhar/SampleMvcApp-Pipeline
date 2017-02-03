@@ -35,10 +35,10 @@ node
 			bat "\"${sonarMSBuild}/MSBuild.SonarQube.Runner.exe\" end"
 				 
 			def response = httpRequest "${sonarqube_host}/api/qualitygates/project_status?projectKey=${projectKey}"
-			def slurper  = new groovy.json.JsonSlurper()
-			def result   = slurper.parseText(response.content)
-			println ('Status: '+response.status)
-			println ('Response: '+response.content)
+		//	def slurper  = new groovy.json.JsonSlurper()
+		//	def result   = slurper.parseText(response.content)
+		//	println ('Status: '+response.status)
+		//	println ('Response: '+response.content)
 				
 	
 	  stage 'Archive'
