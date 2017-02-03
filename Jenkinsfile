@@ -21,7 +21,7 @@ node
 			String nUnit        = "${appsHome}/NUnit.org"
 			
 			bat "\"${nUnit}/nunit-console/nunit3-console.exe\" --result:TestResult.xml;format=nunit2  Tests/target/Tests.dll"
-		//	step([$class: 'NUnitPublisher', testResultsPattern:'**/TestResult.xml', debug: false, keepJUnitReports: true, skipJUnitArchiver:false, failIfNoResults: true]) 
+	//  	step([$class: 'NUnitPublisher', testResultsPattern:'**/TestResult.xml', debug: false, keepJUnitReports: true, skipJUnitArchiver:false, failIfNoResults: true]) 
 	
 	stage 'Code Analysis'
 	
