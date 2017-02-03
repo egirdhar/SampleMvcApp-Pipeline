@@ -4,7 +4,7 @@ node
 	
 			bat 'git init &&  git config http.sslVerify false'
 			checkout([$class: 'GitSCM', branches: [[name: '*/master']],
-			userRemoteConfigs: [[url: 'https://github.com/JonPSmith/SampleMvcWebApp.git']]])
+			userRemoteConfigs: [[url: 'https://github.com/egirdhar/SampleMvcApp-Pipeline.git']]])
 	
 	stage 'Build'
 			// specify the home path of exe files
